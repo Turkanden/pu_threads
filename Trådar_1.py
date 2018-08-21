@@ -24,6 +24,7 @@
 import threading
 import time
 
+
 def worker():
     print (threading.currentThread().getName(), 'Starting')
     time.sleep(2)
@@ -33,6 +34,7 @@ def my_service():
     print (threading.currentThread().getName(), 'Starting')
     time.sleep(3)
     print (threading.currentThread().getName(), 'Exiting')
+
 
 t = threading.Thread(name='my_service', target=my_service)
 w = threading.Thread(name='worker', target=worker)
